@@ -1,0 +1,5 @@
+return {
+	opleader = {
+		line = "tl",
+	},
+}
