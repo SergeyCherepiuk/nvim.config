@@ -34,11 +34,7 @@ require("lazy").setup({
 	},
 
 	-- Color scheme
-	{
-		"folke/tokyonight.nvim",
-		lazy = false,
-		priority = 1000,
-	},
+	{ "nyoom-engineering/oxocarbon.nvim" },
 
 	-- Status line
 	{
@@ -49,23 +45,8 @@ require("lazy").setup({
 		end,
 	},
 
-	-- Twilight
-	{
-		"folke/twilight.nvim",
-		opts = function()
-			return require("configs.twilight")
-		end,
-	},
-
 	-- Treesitter
-	{
-		"nvim-treesitter/nvim-treesitter",
-		opts = {
-			configs = {
-				ensure_installed = { "go" },
-			},
-		},
-	},
+	{ "nvim-treesitter/nvim-treesitter" },
 
 	-- Telescope (fuzzy finder)
 	{
@@ -105,17 +86,23 @@ require("lazy").setup({
 			return require("configs.no-neck-pain")
 		end,
 	},
+
+	-- Errors list
+	{
+		"folke/trouble.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+	},
 })
 
 require("no-neck-pain").enable()
-vim.cmd([[autocmd VimEnter * wincmd w]])
+vim.cmd("autocmd VimEnter * wincmd w")
 
-require("twilight").enable()
-
+require("configs.treesitter")
 require("configs.lspconfig")
 
 -- Setup key mappings
 require("keymaps")
 
 -- Color scheme
-vim.cmd[[colorscheme tokyonight-night]]
+vim.opt.background = "dark"
+vim.cmd("colorscheme oxocarbon")

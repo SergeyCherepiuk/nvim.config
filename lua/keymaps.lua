@@ -13,3 +13,5 @@ vim.keymap.set("n", "<C-k>", "<C-w>k")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
 
 vim.keymap.set("n", "<A-c>", "<CMD>lua require(\"no-neck-pain\").toggle()<CR>")
+
+vim.keymap.set("n", "<leader>xx", function() require("trouble").toggle() end)
