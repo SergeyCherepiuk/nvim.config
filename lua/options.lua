@@ -16,3 +16,6 @@ vim.opt.clipboard = "unnamedplus"
 
 -- Scrolling
 vim.wo.scrolloff = 12
+
+-- Wrap
+vim.wo.wrap = false

@@ -33,8 +33,20 @@ require("lazy").setup({
 		"neovim/nvim-lspconfig",
 	},
 
+	-- Lsp kind
+	{ "onsails/lspkind.nvim" },
+
+	-- Null-ls
+	{
+		"jose-elias-alvarez/null-ls.nvim",
+		ft = "go",
+		opts = function()
+			return require("configs.null-ls")
+		end,
+	},
+
 	-- Color scheme
-	{ "nyoom-engineering/oxocarbon.nvim" },
+	{ "projekt0n/github-nvim-theme" },
 
 	-- Status line
 	{
@@ -92,10 +104,15 @@ require("lazy").setup({
 		"folke/trouble.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 	},
+
+	-- Autoclosing
+	{ "m4xshen/autoclose.nvim" },
 })
 
 require("no-neck-pain").enable()
 vim.cmd("autocmd VimEnter * wincmd w")
+
+require("autoclose").setup()
 
 require("configs.treesitter")
 require("configs.lspconfig")
@@ -104,5 +121,4 @@ require("configs.lspconfig")
 require("keymaps")
 
 -- Color scheme
-vim.opt.background = "dark"
-vim.cmd("colorscheme oxocarbon")
+vim.cmd("colorscheme github_dark")
