@@ -1,7 +1,10 @@
 local configs = require("nvim-treesitter.configs")
 
 configs.setup {
-	ensure_installed = { "go" },
+	ensure_installed = {
+		"go", -- Golang
+		"elixir", "heex", "eex", -- Elixir
+	},
 	sync_install = false,
 	ignore_install = { "" },
 	highlight = {
