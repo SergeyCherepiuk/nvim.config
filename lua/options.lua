@@ -19,3 +19,6 @@ vim.wo.scrolloff = 12
 
 -- Wrap
 vim.wo.wrap = false
+
+-- Color scheme
+vim.o.background = "dark"

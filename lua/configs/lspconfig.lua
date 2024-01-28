@@ -16,6 +16,7 @@ lspconfig.gopls.setup({
     },
 })
 
+-- Elixir
 lspconfig.elixirls.setup({
 	cmd = { os.getenv("HOME") .. "/elixir-ls/release/language_server.sh" },
 	filetypes = { "elixir", "eelixir", "heex", "surface" },

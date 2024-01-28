@@ -45,8 +45,9 @@ require("lazy").setup({
 		end,
 	},
 
-	-- Color scheme
+	-- Color schemes
 	{ "projekt0n/github-nvim-theme" },
+	{ "xdefrag/vim-beelzebub" },
 
 	-- Status line
 	{
@@ -107,12 +108,16 @@ require("lazy").setup({
 
 	-- Autoclosing
 	{ "m4xshen/autoclose.nvim" },
+
+	-- Markers
+	{ "chentoast/marks.nvim" }
 })
 
 require("no-neck-pain").enable()
 vim.cmd("autocmd VimEnter * wincmd w")
 
 require("autoclose").setup()
+require("marks").setup()
 
 require("configs.treesitter")
 require("configs.lspconfig")
@@ -121,4 +126,4 @@ require("configs.lspconfig")
 require("keymaps")
 
 -- Color scheme
-vim.cmd("colorscheme github_dark")
+vim.cmd("colorscheme beelzebub")
