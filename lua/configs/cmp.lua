@@ -27,13 +27,17 @@ return {
 		},
 	}),
 	formatting = {
-		format = function(entry, vim_item)
-			vim_item.kind = lspkind.presets.default[vim_item.kind] .. " " .. vim_item.kind
-			return vim_item
-		end,
+		format = lspkind.cmp_format({
+			preset = "default",
+			mode = "symbol_text",
+            maxwidth = 20,
+            ellipsis_char = "...",
+		}),
 	},
 	window = {
 		completion = cmp.config.window.bordered(),
 		documentation = cmp.config.window.bordered(),
 	},
 }
+
+

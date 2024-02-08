@@ -22,3 +22,10 @@ lspconfig.elixirls.setup({
 	filetypes = { "elixir", "eelixir", "heex", "surface" },
 	capabilities = capabilities,
 })
+
+-- Zig
+lspconfig.zls.setup({
+	cmd = { "zls" },
+	filetypes = { "zig" },
+	capabilities = capabilities,
+})

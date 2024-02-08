@@ -4,6 +4,7 @@ configs.setup {
 	ensure_installed = {
 		"go", -- Golang
 		"elixir", "heex", "eex", -- Elixir
+		"zig", -- Zig
 	},
 	sync_install = false,
 	ignore_install = { "" },
@@ -11,7 +12,6 @@ configs.setup {
 		enable = true,
 		disable = { "" },
 		additional_vim_regex_highlighting = true,
-
 	},
 	indent = { enable = true, disable = { "yaml" } },
 	rainbow = {
