@@ -48,6 +48,7 @@ require("lazy").setup({
 	-- Color schemes
 	{ "projekt0n/github-nvim-theme" },
 	{ "xdefrag/vim-beelzebub" },
+	{ "rebelot/kanagawa.nvim" },
 
 	-- Status line
 	{
@@ -126,4 +127,4 @@ require("configs.lspconfig")
 require("keymaps")
 
 -- Color scheme
-vim.cmd("colorscheme beelzebub")
+vim.cmd("colorscheme kanagawa-dragon")
